@@ -458,7 +458,11 @@ linux:
         - host1
         - host2
         - .local
-
+    #pillars for systemd journal setup
+    systemd:
+      journal:
+        SystemMaxUse: "50M"
+        RuntimeMaxFiles: "100"
     # pillars for netconsole setup
     netconsole:
       enabled: true
